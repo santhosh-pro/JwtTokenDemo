@@ -9,24 +9,34 @@ namespace JwtTokenDemo.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IJwtTokenService _jwtTokenService;
-         private readonly IConfiguration _config;
-        public UsersController(IJwtTokenService jwtTokenService,IConfiguration config)
+        private readonly IConfiguration _config;
+        public UsersController(IJwtTokenService jwtTokenService, IConfiguration config)
         {
-            _jwtTokenService =jwtTokenService;
-            _config=config;
+            _jwtTokenService = jwtTokenService;
+            _config = config;
         }
 
         [AllowAnonymous]
-        [HttpGet("login")]
-        public ActionResult Login()
+        [HttpGet("LoginAdmin")]
+        public ActionResult LoginAdmin()
         {
-            var key = _config.GetSection ("AppSettings:EncryptionKey").Value;
-           // Roles = CUSTOMER,ADMIN
-            var token= _jwtTokenService.GenerateToken(1,1,"CUSTOMER",key);
+            var key = _config.GetSection("AppSettings:EncryptionKey").Value;
+            // Roles = CUSTOMER,ADMIN
+            var token = _jwtTokenService.GenerateToken(1, 1, "ADMIN", key);
             return Ok(token);
         }
 
-        [Authorize(Roles="ADMIN")]
+        [AllowAnonymous]
+        [HttpGet("LoginCustomer")]
+        public ActionResult LoginCustomer()
+        {
+            var key = _config.GetSection("AppSettings:EncryptionKey").Value;
+            // Roles = CUSTOMER,ADMIN
+            var token = _jwtTokenService.GenerateToken(2, 3, "CUSTOMER", key);
+            return Ok(token);
+        }
+
+        [Authorize(Roles = "ADMIN")]
         [HttpGet]
         public ActionResult Get()
         {
