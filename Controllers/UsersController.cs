@@ -52,7 +52,7 @@ namespace JwtTokenDemo.Controllers
         [HttpGet("all")]
         public ActionResult GetAll()
         {
-            return Ok("Authorize User Only");
+            return Ok("Any one can view");
         }
     }
 }
