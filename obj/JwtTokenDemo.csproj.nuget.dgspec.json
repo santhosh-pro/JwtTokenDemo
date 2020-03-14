@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/santhosh/Desktop/RND/dotnet_examples/JwtTokenDemo/JwtTokenDemo.csproj": {}
+    "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj": {}
   },
   "projects": {
-    "/Users/santhosh/Desktop/RND/dotnet_examples/JwtTokenDemo/JwtTokenDemo.csproj": {
+    "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/santhosh/Desktop/RND/dotnet_examples/JwtTokenDemo/JwtTokenDemo.csproj",
+        "projectUniqueName": "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj",
         "projectName": "JwtTokenDemo",
-        "projectPath": "/Users/santhosh/Desktop/RND/dotnet_examples/JwtTokenDemo/JwtTokenDemo.csproj",
+        "projectPath": "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj",
         "packagesPath": "/Users/santhosh/.nuget/packages/",
-        "outputPath": "/Users/santhosh/Desktop/RND/dotnet_examples/JwtTokenDemo/obj/",
+        "outputPath": "/Users/santhosh/Desktop/RND/JwtTokenDemo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/santhosh/.nuget/NuGet/NuGet.Config"
@@ -39,6 +39,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

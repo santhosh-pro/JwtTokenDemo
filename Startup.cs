@@ -24,6 +24,7 @@ namespace JwtTokenDemo
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             var key = Configuration.GetSection("AppSettings:EncryptionKey").Value;
             services.AddJwtBearerToken(key);
+            services.AddSwaggerDocumentation("Jwt Token Demo API");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +46,8 @@ namespace JwtTokenDemo
             {
                 endpoints.MapControllers();
             });
+             app.UseSwaggerDocumentation("Jwt Token Demo API");
+
         }
     }
 }
