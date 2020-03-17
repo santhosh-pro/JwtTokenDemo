@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj": {}
+    "/Users/santhosh/Desktop/R&D/JwtTokenDemo/JwtTokenDemo.csproj": {}
   },
   "projects": {
-    "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj": {
+    "/Users/santhosh/Desktop/R&D/JwtTokenDemo/JwtTokenDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj",
+        "projectUniqueName": "/Users/santhosh/Desktop/R&D/JwtTokenDemo/JwtTokenDemo.csproj",
         "projectName": "JwtTokenDemo",
-        "projectPath": "/Users/santhosh/Desktop/RND/JwtTokenDemo/JwtTokenDemo.csproj",
+        "projectPath": "/Users/santhosh/Desktop/R&D/JwtTokenDemo/JwtTokenDemo.csproj",
         "packagesPath": "/Users/santhosh/.nuget/packages/",
-        "outputPath": "/Users/santhosh/Desktop/RND/JwtTokenDemo/obj/",
+        "outputPath": "/Users/santhosh/Desktop/R&D/JwtTokenDemo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/santhosh/.nuget/NuGet/NuGet.Config"

@@ -9,10 +9,12 @@ namespace JwtTokenDemo.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IJwtTokenService _jwtTokenService;
+        private readonly ICurrentUserService _currentUserService;
         private readonly IConfiguration _config;
-        public UsersController(IJwtTokenService jwtTokenService, IConfiguration config)
+        public UsersController(IJwtTokenService jwtTokenService, ICurrentUserService currentUserService, IConfiguration config)
         {
             _jwtTokenService = jwtTokenService;
+            _currentUserService = currentUserService;
             _config = config;
         }
 
@@ -40,13 +42,13 @@ namespace JwtTokenDemo.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok("Admin only");
+            return Ok($"Admin only. UserId: {_currentUserService.UserId} , Id: {_currentUserService.Id}, UserType: {_currentUserService.UserType}");
         }
         [Authorize]
         [HttpGet("Customers")]
         public ActionResult GetCustomer()
         {
-            return Ok("Authorize User Only");
+            return Ok($"Authorize User Only  UserId: {_currentUserService.UserId} , Id: {_currentUserService.Id}, UserType: {_currentUserService.UserType}");
         }
         [AllowAnonymous]
         [HttpGet("all")]
